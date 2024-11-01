@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar um livro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: stretch;">
+    <form method="post" action="registry.php" style="width: 47vw">
+        <fieldset>
+            <legend>Cadastrar um livro-modelo</legend>
+            <label for="isbn_code">Código ISBN: </label>
+            <input type="text" name="isbn_code" required>
+            <br>
+            <label for="title">Título: </label>
+            <input type="text" name="title" required>
+            <br>
+            <label for="author">Autor: </label>
+            <input type="text" name="author" required>
+            <br>
+            <label for="country">País: </label>
+            <select name="country" required>
+                <option value="Brasil">Brasil</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Angola">Angola</option>
+            </select>
+            <br>
+            <label for="editor">Editora: </label>
+            <input type="text" name="editor" required>
+            <br>
+            <label for="edition">Edição</label>
+            <input type="number" name="edition" min="0" required>
+        </fieldset>
+        <button type="submit">Cadastrar</button>
+    </form>
+    <form method="post" action="registry_book.php" style="width: 47vw">
+        <fieldset>
+        <legend>Incluir um livro</legend>
+        <label>Código ISBN:</label>
+        <input type="text" name="isbn" required>
+        <button type="submit">Incluir</button>
+    </fieldset>
+    </form>
+</div>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>

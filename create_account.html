@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <form method="post" action="create_account.php">
+        <fieldset>
+            <legend>Criar conta</legend>
+            <label for="username">Nome: </label>
+            <input type="text" name="username" required>
+            <br>
+            <label for="estate">Estado: </label>
+            <select name="estate" required>
+                <option>São Paulo</option>
+                <option>Paraná</option>
+            </select>
+            <label for="city">Cidade: </label>
+            <select name="city" required>
+                <option>Ourinhos</option>
+                <option>São Paulo</option>
+                <option>Marília</option>
+                <option>Pindamonhangaba</option>
+            </select>
+            <br>
+            <label for="institution">Instituição</label>
+            <select name="institution" required>
+                <option>SESI CE 144 Ourinhos</option>
+                <option>SENAI 794 Ourinhos</option>
+                <option>Biblioteca FAMA - Ourinhos</option>
+                <option>Biblioca Municipal de Ourinhos</option>
+            </select>
+            <br>
+            <label for="userid">Identificação de funcionário: </label>
+            <input type="text" name="userid" maxlength="4" required>
+            <br>
+            <label for="passw">Senha: </label>
+            <input type="password" name="passw" required>
+            <br>
+            <label for="passw_again">Confirmação da senha: </label>
+            <input type="password" name="passw_again" required>
+        </fieldset>
+        <button type="submit">Criar conta</button>
+        <p>Já possui login? <a href="login.html">Entre por aqui</a></p>
+    </form>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>
